@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_5330038.Views.TodoItemPage"
+             Title="{Binding Name}"
+             xmlns:models ="clr-namespace:_5330038.Models"
+             x:DataType="models:TodoItem">
+    <VerticalStackLayout Padding="20" Spacing="10" VerticalOptions="StartAndExpand">
+        <Label Text="Name" TextColor="MediumPurple" FontAttributes="Bold" />
+        <Entry Text="{Binding Name}"/>
+        <Label Text="Notes" TextColor="MediumPurple" FontAttributes="Bold" />
+        <Entry Text="{Binding Notes}"/>
+        <Label Text="Done" TextColor="MediumPurple" FontAttributes="Bold" />
+        <Switch IsToggled="{Binding Done}"/>
+        <Button Text="Save" Clicked="Save_Clicked" TextColor="WhiteSmoke" FontAttributes="Bold" BackgroundColor="MediumOrchid" />
+        <Button Text="Delete" Clicked="Delete_Clicked" TextColor="WhiteSmoke" FontAttributes="Bold" BackgroundColor="MediumOrchid" />
+        <Button Text="Cancel" Clicked="Cancel_Clicked" TextColor="WhiteSmoke" FontAttributes="Bold" BackgroundColor="MediumOrchid" />
+
+    </VerticalStackLayout>
+</ContentPage>
